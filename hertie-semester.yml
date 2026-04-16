@@ -1,0 +1,33 @@
+# Hertie DSL — Semester configuration
+# Auto-populated by: python3 roster.py --new-semester
+# Edit freely after generation.
+#
+# TEAMS this maps to in the course org:
+#   instructors-f2025  → instructors + teaching_assistants (maintain access)
+#   students-f2025     → students (write access via GitHub Classroom)
+#   auditors-f2025     → auditors (read access)
+
+semester: f2025
+org: Hertie-School-Deep-Learning-E1394
+course_code: GRAD-E1394
+course_name: "Deep Learning"
+
+instructors:
+  - github: simonmunzert
+    name: "Simon Munzert"
+    email: "munzert@hertie-school.org"
+
+teaching_assistants:
+  # TAs get the same team access as instructors (instructors-f2025)
+  # GitHub Classroom's "grader" role handles submission access specifically
+  []
+
+auditors:
+  # Add GitHub logins of people following the course without submitting
+  # They get read access to content-f2025 only
+  []
+
+students:
+  # Only needed if NOT using GitHub Classroom.
+  # If using Classroom, leave empty — Classroom manages student repo creation.
+  []

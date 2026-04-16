@@ -1,4 +1,11 @@
 ---
 layout: home
 ---
-Register to our [Google groups page](https://groups.google.com/forum/#!forum/gp-id) to get course notifications via email.
+
+Welcome to **{{ site.course_name }}** at the [Hertie School Data Science Lab]({{ site.dsl_org_url }}).
+
+{% if site.content_repo %}
+Course materials are available in the [content repository]({{ site.content_repo }}).
+{% endif %}
+
+**Questions?** Open an issue in this course's [GitHub organisation](https://github.com/{{ site.github_org }}) or contact the instructor directly.

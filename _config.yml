@@ -1,38 +1,48 @@
-# Site settings
-course_name: History of Magic
-course_description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ornare aliquam mattis. Donec hendrerit sollicitudin urna. Aliquam venenatis rutrum velit, at lobortis dui cursus a. Nam varius metus in turpis maximus, ut rhoncus tellus dictum. In aliquam tortor nec mi dapibus, sit amet vehicula dolor auctor."
-course_semester: "Fall 1998"
+# ============================================================
+# Hertie DSL Course Website — Configuration
+# ============================================================
+# Edit the fields below for your course.
+# Do NOT change anything below the "Do not change" line.
 
-baseurl: "/jekyll-course-website-template" # the subpath of your site, e.g. /blog/
-url: "http://kazemnejad.github.io/" # the base hostname & protocol for your site
+# --- Course identity ---
+course_name: "Course Name (Code)"           # e.g. "Deep Learning (GRAD-E1394)"
+course_description: "One paragraph description of the course."
+course_semester: "Fall 2025"                # e.g. "Fall 2025" or "Spring 2026"
+course_code: "GRAD-E1394"                   # Hertie course code
+github_org: "Hertie-School-Deep-Learning-E1394"  # GitHub org for this course
 
-schoolname: "Hogwarts"
-schoolurl: "https://hogwarts.edu"
-twitter_username: username 
-
+# --- Instructor / institution ---
+schoolname: "Hertie School"
+schoolurl: "https://hertie-school.org/en/datasciencelab"
+dsl_org_url: "https://github.com/hertie-data-science-lab"
 address: |
-    School of Witchcraft and Wizardry
-    Hogwarts
-    Scotland
+    Data Science Lab
+    Hertie School
+    Friedrichstraße 180
+    10117 Berlin, Germany
 
-# Set your Google Analytics tracking ID (set up yours at http://www.google.com/analytics/)
+# --- Optional ---
+# twitter_username: hertie_dslab
 # google_analytics: UA-XXXXXXXX-X
 
-### Do not change the followings unless you know what you are doing ###
+# --- Content repo (where course materials live) ---
+# content_repo: "https://github.com/Hertie-School-Deep-Learning-E1394/content-f2025"
 
-# Build settings
+### Do not change the following unless you know what you are doing ###
+
+baseurl: ""
+url: ""
+
 markdown: kramdown
-
-# Other options
 permalink: blog/:year/:month/:title
 excerpt_separator: "<!--more-->"
 
 include: ['_images', '_css']
-exclude: ['develop']
+exclude: ['develop', 'hertie-config.yml']
 
 dateformat: "%m/%d/%Y"
-
 future: true
+
 collections:
     events:
         output: true
@@ -42,7 +52,6 @@ collections:
         output: true
     announcements:
         output: false
-
 
 defaults:
   - scope:
