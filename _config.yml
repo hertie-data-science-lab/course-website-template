@@ -38,7 +38,14 @@ permalink: blog/:year/:month/:title
 excerpt_separator: "<!--more-->"
 
 include: ['_images', '_css']
-exclude: ['develop', 'hertie-config.yml']
+exclude:
+  - develop
+  - hertie-config.yml
+  - vendor
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - .bundle
 
 dateformat: "%m/%d/%Y"
 future: true
