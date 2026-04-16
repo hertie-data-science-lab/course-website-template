@@ -1,6 +1,12 @@
-# Hertie DSL — Course Website Template
+# Hertie DSL — Course Website Template (DSL Dark Theme)
 
-A Jekyll template for [Hertie Data Science Lab](https://github.com/hertie-data-science-lab) course websites. Fork of [kazemnejad/jekyll-course-website-template](https://github.com/kazemnejad/jekyll-course-website-template), branded for Hertie School DSL.
+A Jekyll template for [Hertie Data Science Lab](https://github.com/hertie-data-science-lab) course websites. Fork of [kazemnejad/jekyll-course-website-template](https://github.com/kazemnejad/jekyll-course-website-template), with a dark theme matching the [DSL public site](https://hertie-data-science-lab.github.io/).
+
+**Branches:**
+- `master` — Hertie red (#BA0020) on white, brand-compliant
+- `feature/dsl-dark-theme` — Dark + gold (#cda45e), matches the DSL public site
+
+Use whichever fits your course.
 
 ## Quick start (via `roster.py`)
 

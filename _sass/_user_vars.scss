@@ -1,9 +1,21 @@
-// Hertie School Data Science Lab theme
-// Brand colours: https://brandfetch.com/hertie-school.org
-$primary-color:     #BA0020;   // Hertie Monza red (primary brand colour)
-$accent-color:      #8a0018;   // darker red for hover states
-$title-color:       #1a1a1a;   // near-black for headings
+// Hertie School Data Science Lab — dark theme
+// Matches the DSL public site: https://hertie-data-science-lab.github.io/
+//
+// Palette:
+//   background     #0c0b09  (near-black)
+//   header/dark    #1a1814  (deep warm black)
+//   text           #ffffff  (white)
+//   accent/links   #cda45e  (warm gold)
+//   accent hover   #d9ba85  (lighter gold)
+
+$primary-color:     #cda45e;   // warm gold — primary accent
+$accent-color:      #d9ba85;   // lighter gold for hover states
+$title-color:       #ffffff;   // headings are white on dark background
 $header-text-color: #ffffff;
-$header-color:      #BA0020;   // red header
+$header-color:      #1a1814;   // deep warm black header
 $header-background-opacity: 0.92;
 $header-background-invert: 0%;
+
+// Body overrides — picked up by main.scss via !default or direct use
+$dsl-body-background: #0c0b09;
+$dsl-body-text: #ffffff;
