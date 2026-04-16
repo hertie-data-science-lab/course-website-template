@@ -27,7 +27,7 @@ This clones the template, fills in `_config.yml` and `hertie-semester.yml`, and 
 | --- | --- |
 | `_config.yml` | Course name, semester, code, instructor |
 | `_data/people.yml` | Instructors and TAs |
-| `hertie-semester.yml` | Roster (or use `roster.py --sync`) |
+| `semesters/{code}/hertie-semester.yml` | Roster for that cohort (one file per semester — preserved historically) |
 | `_lectures/*.md` | One file per lecture |
 | `_assignments/*.md` | One file per assignment |
 | `schedule.md` | Weekly schedule |
