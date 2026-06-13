@@ -21,7 +21,7 @@ layout: page
         <strong>tl;dr:</strong> {{ lecture.tldr }}
         <br/>
         <strong>
-        {% include lecture_links.html lecture=lecture %}
+        {% for link in lecture.links %}{% if link.name contains "lecture -" %}[<a title="Download {{ link.name }}" href="{% if link.url contains '://' %}{{ link.url }}{% else %}{{ link.url | prepend: site.baseurl }}{% endif %}">{{ link.name | remove: "lecture - " }}</a>] {% endif %}{% endfor %}
         </strong>
 
         {% if lecture.content != '' %}

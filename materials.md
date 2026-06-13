@@ -4,17 +4,14 @@ title: Materials
 permalink: /materials/
 ---
 
-{% include image.html url="/_images/cover2.jpg" width=175 align="right" %}
+Readings by week (lecture slides are on the [Lectures](/lectures/) tab). Released materials
+are visible to enrolled students.
 
-## Book
-
-Alan Turing and Noam Chomsky: Very Famous Book
-
-## Additional Course Materials
-
-* If you are not familiar with Python programming, use any online tutorial to get a handle of it.
-* [Material #1](http://www.example.com/): how a computer chess player thinks!
-* [Material #2](http://www.example.com/): how a computer chess player thinks!
-* [Material #3](http://www.example.com/): how a computer chess player thinks!
-* [Material #4](http://www.example.com/): how a computer chess player thinks!
-* [Material #5](http://www.example.com/): how a computer chess player thinks!
+{% assign lectures_sorted = site.lectures | sort: 'date' %}
+{% for lecture in lectures_sorted %}
+{% capture readings %}{% for link in lecture.links %}{% if link.name contains "reading -" %}<li><a href="{% if link.url contains '://' %}{{ link.url }}{% else %}{{ link.url | prepend: site.baseurl }}{% endif %}">{{ link.name | remove: "reading - " }}</a></li>{% endif %}{% endfor %}{% endcapture %}
+{% if readings != "" %}
+<h3>{{ lecture.title }}</h3>
+<ul>{{ readings }}</ul>
+{% endif %}
+{% endfor %}
