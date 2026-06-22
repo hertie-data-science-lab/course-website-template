@@ -3,6 +3,12 @@ name: Deploy course website
 on:
   push:
     branches: [main, master]
+  # Rebuild when the shared theme changes (dispatched by dsl-jekyll-theme).
+  repository_dispatch:
+    types: [theme-updated]
+  # Monthly backstop so theme changes propagate even if a dispatch is missed.
+  schedule:
+    - cron: "0 5 1 * *"
   workflow_dispatch:
 
 permissions:
@@ -33,6 +39,8 @@ jobs:
           JEKYLL_ENV: production
           # jekyll-github-metadata needs this to resolve the repo
           PAGES_REPO_NWO: ${{ github.repository }}
+          # jekyll-remote-theme needs a token to fetch the shared theme repo
+          JEKYLL_GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
 
       - uses: actions/upload-pages-artifact@v3

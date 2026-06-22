@@ -16,6 +16,8 @@ gem "github-pages", group: :jekyll_plugins
 # If you have any plugins, put them here!
 group :jekyll_plugins do
   gem "jekyll-feed", "~> 0.12"
+  # Pulls the shared dsl-jekyll-theme via `remote_theme` (also bundled by github-pages).
+  gem "jekyll-remote-theme"
 end
 
 # Windows and JRuby does not include zoneinfo files, so bundle the tzinfo-data gem
