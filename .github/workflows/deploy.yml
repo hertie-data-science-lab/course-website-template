@@ -2,7 +2,7 @@ name: Deploy course website
 
 on:
   push:
-    branches: [main, master]
+    branches: [main]
   # Rebuild when the shared theme changes (dispatched by dsl-jekyll-theme).
   repository_dispatch:
     types: [theme-updated]
