@@ -1,7 +1,7 @@
 ---
 layout: materials
-title: Materials
+title: All Materials
 permalink: /materials/
 ---
 
-Readings by session. Citation lists are public; the files themselves are visible to enrolled students.
+Everything released to this cohort, whether or not it belongs to a session. Folders open on GitHub. Released materials are visible to enrolled students.

@@ -3,4 +3,5 @@ layout: lectures
 title: Lectures
 permalink: /lectures/
 ---
-You can download the lectures here. We will try to upload lectures prior to their corresponding classes.
+
+Lecture slides by session (lab exercises are on the [Labs](/labs/) tab). Released materials are visible to enrolled students.
