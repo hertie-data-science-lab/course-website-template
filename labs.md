@@ -1,21 +1,8 @@
 ---
-layout: page
+layout: labs
 title: Labs
 permalink: /labs/
 ---
 
-Lab exercises by week (lecture slides are on the [Lectures](/lectures/) tab). Released
+Lab exercises by session (lecture slides are on the [Lectures](/lectures/) tab). Released
 materials are visible to enrolled students.
-
-{% comment %}
-Labs are their own entries in the _lectures collection (`type: lab`), each carrying
-its "lab - ..." links.
-{% endcomment %}
-{% assign lectures_sorted = site.lectures | where: "type", "lab" | sort: 'date' %}
-{% for lecture in lectures_sorted %}
-{% capture labs %}{% for link in lecture.links %}{% if link.name contains "lab -" %}<li><a href="{% if link.url contains '://' %}{{ link.url }}{% else %}{{ link.url | prepend: site.baseurl }}{% endif %}">{{ link.name | remove: "lab - " }}</a></li>{% endif %}{% endfor %}{% endcapture %}
-{% if labs != "" %}
-<h3>{{ lecture.title }}</h3>
-<ul>{{ labs }}</ul>
-{% endif %}
-{% endfor %}
