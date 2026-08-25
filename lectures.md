@@ -4,4 +4,4 @@ title: Lectures
 permalink: /lectures/
 ---
 
-Lecture slides by session (lab exercises are on the [Labs](/labs/) tab). Released materials are visible to enrolled students.
+Lecture slides are accessible to enrolled students.
